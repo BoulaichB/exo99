@@ -10,9 +10,13 @@ let myObject = {
 
 // ### 1. En passant par la div dont l'id est object, récupère le h1 et le h2 dans un tableau du nom de myElements
 let div = document.querySelector('#object');
-let titres = [div.firstElementChild, div.lastElementChild];
+let myElements = [div.firstElementChild, div.lastElementChild];
 
 // ### 2. Trouve une méthode pour créer un tableau des propriétés de ton objet
+let tableau = Object.keys(myObject).map(function(cle){
+    return [cle, myObject[cle]];
+});
+
 // ### 3. Créer une boucle qui va parcourir toutes les propriétés contenu dans ton object et qui pour chacune d'elle fait un console.log de la propriété
 // ### 4. Efface ton console.log, trouve un moyen d'aller dans ton objet récupéré la valeur de chaque propriétés et fait un console log de ce que cela retourne
 // ### 5. Rajoute un count(compteur ou index comme tu l'entends) dans ta boucle
